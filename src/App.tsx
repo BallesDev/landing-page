@@ -12,7 +12,7 @@ import { Services } from "./components/Services";
 import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
 import "./App.css";
-import { Technologies } from "./components/technologies";
+import { Technologies } from "./components/Technologies";
 
 function App() {
   return (
