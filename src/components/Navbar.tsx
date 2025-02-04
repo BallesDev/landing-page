@@ -12,10 +12,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { buttonVariants } from "./ui/button";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { Button, buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
+import { ContactUS } from "./ContactUs";
 
 interface RouteProps {
   href: string;
@@ -43,6 +45,8 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -112,10 +116,16 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
+            <Button onClick={() => setIsContactOpen(true)} variant="secondary">
+              <EnvelopeClosedIcon className="mr-2 w-5 h-5" />
+              Contact Us
+            </Button>
+
             <ModeToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>
+      <ContactUS open={isContactOpen} onOpenChange={setIsContactOpen} />
     </header>
   );
 };

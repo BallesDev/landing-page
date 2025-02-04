@@ -1,7 +1,11 @@
 import { Button } from "./ui/button";
 import { HeroCards } from "./HeroCards";
+import { useState } from "react";
+import { ContactUS } from "./ContactUs";
 
 export const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
       <div className="text-center lg:text-start space-y-6">
@@ -27,7 +31,9 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Get Started Today</Button>
+          <Button className="w-full md:w-1/3" onClick={() => setIsOpen(true)}>
+            Get Started Today
+          </Button>
         </div>
       </div>
 
@@ -38,6 +44,7 @@ export const Hero = () => {
 
       {/* Shadow effect */}
       <div className="shadow"></div>
+      <ContactUS open={isOpen} onOpenChange={setIsOpen} />
     </section>
   );
 };
