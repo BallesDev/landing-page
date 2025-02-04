@@ -86,7 +86,7 @@ export function ContactUS({ open, onOpenChange }: ContactUSProps) {
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent>
+      <SheetContent className="max-h-screen overflow-y-scroll">
         <SheetHeader>
           <SheetTitle>Contact Us</SheetTitle>
           <SheetDescription>

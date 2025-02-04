@@ -94,6 +94,13 @@ export const Navbar = () => {
                       {label}
                     </a>
                   ))}
+                  <Button
+                    onClick={() => setIsContactOpen(true)}
+                    variant="secondary"
+                  >
+                    <EnvelopeClosedIcon className="mr-2 w-5 h-5" />
+                    Contact Us
+                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>
