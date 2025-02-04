@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import {
-  DiscoveryIcon,
-  MapIcon,
-  PlaneIcon,
-  GiftIcon,
+  CloudNetworkIcon,
+  BulbIcon,
+  TimelineIcon,
+  CodeIcon,
 } from "../components/Icons";
 
 interface FeatureProps {
@@ -14,25 +14,25 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <DiscoveryIcon />,
+    icon: <BulbIcon />,
     title: "Discovery",
     description:
       "We analyze your idea, define goals, and explore the best tech solutions.",
   },
   {
-    icon: <MapIcon />,
+    icon: <TimelineIcon />,
     title: "Planning & Architecture",
     description:
       "We design a solid roadmap, select the stack, and create the system architecture.",
   },
   {
-    icon: <PlaneIcon />,
+    icon: <CodeIcon />,
     title: "Development & Testing",
     description:
       "We build, test, and refine the software to ensure performance and scalability.",
   },
   {
-    icon: <GiftIcon />,
+    icon: <CloudNetworkIcon />,
     title: "Deployment & Support",
     description:
       "We launch, monitor, and provide ongoing support to keep your product running smoothly.",
@@ -59,7 +59,7 @@ export const HowItWorks = () => {
           <Card key={title} className="bg-muted/50">
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">
-                {icon}
+                <span className="text-[hsl(var(--primary))]">{icon}</span>
                 {title}
               </CardTitle>
             </CardHeader>
