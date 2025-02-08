@@ -56,7 +56,6 @@ export function ContactUS({ open, onOpenChange }: ContactUSProps) {
           email: data.email,
           company: data.company || "",
           message: data.message,
-          _captcha: "false", // Desactiva el captcha de FormSubmit
           _blacklist: "spam.com,tempmail.com", // Bloquea estos dominios
           _template: "table", // Formato de email bonito
         }).toString(),
