@@ -46,7 +46,7 @@ export function ContactUS({ open, onOpenChange }: ContactUSProps) {
 
   async function onSubmit(data: z.infer<typeof ContactFormSchema>) {
     try {
-      const response = await fetch("https://formsubmit.co/tu-email@gmail.com", {
+      const response = await fetch("https://formsubmit.co/contact@balles.dev", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
